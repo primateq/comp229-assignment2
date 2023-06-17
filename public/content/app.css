@@ -1,0 +1,34 @@
+/*File name: comp229-assignment2
+Student Name: Alessandra Primatesta
+Student ID: 301.297.110
+Date: June 18, 2023*/
+
+.homeinfo {
+    text-align: center;
+    padding: 2rem;
+}
+
+.aboutinfo {
+    text-align: center;
+    padding: 2rem;
+}
+
+.projectsinfo {
+    text-align: center;
+    padding: 2rem;
+}
+
+.servicesinfo {
+    text-align: center;
+    padding: 2rem;
+}
+
+.contactform {
+    text-align: center;
+    padding: 2rem;
+}
+
+
+* {
+    font-family: sans-serif;
+}

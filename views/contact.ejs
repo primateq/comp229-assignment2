@@ -1,0 +1,38 @@
+<!--File name: comp229-assignment2
+Student Name: Alessandra Primatesta
+Student ID: 301.297.110
+Date: June 18, 2023-->
+
+<%- include partials/header.ejs%>
+
+<%- include partials/main_nav.ejs%>
+
+<%- include partials/welcome.ejs%>
+
+<div class="contactform">
+    <p>Want to get in touch? Please fill out the form below.</p>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Contact Number" id="floatingTextarea3" ></textarea>
+        <label for="floatingTextarea3">Contact Number</label>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Full Name" id="floatingTextarea" ></textarea>
+        <label for="floatingTextarea">Full Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Message</label>
+        <br>
+        <button type="submit" id="button"><a href="/">Submit</a></button>
+      </div>
+      
+      <br>
+</div>
+  
+<%- include partials/bottom_nav.ejs%>
+
+<%- include partials/footer.ejs%>
