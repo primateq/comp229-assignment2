@@ -1,33 +1,35 @@
 {
-  "name": "comp229-assignment1",
+  "name": "comp229-assignment2",
   "version": "0.0.2",
   "private": true,
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node server"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "bootstrap": "^5.3.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "g": "^2.0.1",
     "http-errors": "~1.6.3",
     "jquery": "^3.7.0",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.22",
     "popper.js": "^1.16.1"
   },
-  "description": "Assignment 1",
-  "main": "index.js",
-  "devDependencies": {},
+  "description": "Assignment 2",
+  "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/primateq/comp229-assignment1.git"
+    "url": "git+https://github.com/primateq/comp229-assignment2.git"
   },
   "author": "Alessandra Primatesta",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/primateq/comp229-assignment1/issues"
+    "url": "https://github.com/primateq/comp229-assignment2/issues"
   },
-  "homepage": "https://github.com/primateq/comp229-assignment1#readme"
+  "homepage": "https://github.com/primateq/comp229-assignment2#readme"
 }
