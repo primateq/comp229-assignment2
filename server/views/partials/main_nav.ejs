@@ -56,6 +56,16 @@ Date: June 18, 2023-->
                       Services</a>
                 </li>
 
+                <% if (title=="Business Contacts" ) {%>
+                <li class="nav-item active">
+                  <% } 
+                  else {%>
+                <li class="nav-item">
+                  <% } %>
+                    <a class="nav-link" aria-current="page" href="/business-contacts"><i class="fa-solid fa-address-book"></i> 
+                      Business Contacts</a>
+                </li>
+
                 <% if (title=="Contact" ) {%>
                   <li class="nav-item active">
                     <% } 
