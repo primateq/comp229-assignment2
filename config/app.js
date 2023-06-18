@@ -14,8 +14,8 @@ let logger = require('morgan');
 let mongoose = require('mongoose')
 let DB = require ('./db');
 
-let indexRouter = require('../routes/index');
-let businessContactsRouter = require('../routes/businesscontacts');
+let indexRouter = require('../../routes/index');
+let businessContactsRouter = require('../../routes/businesscontacts');
 
 //point mongoose to the DB URI
 mongoose.connect(DB.URI);
