@@ -7,7 +7,7 @@ Date: June 18, 2023*/
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('./config/app');
 var debug = require('debug')('comp229-assignment2:server');
 var http = require('http');
 
