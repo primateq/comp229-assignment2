@@ -12,7 +12,7 @@ router.get('/', async (req, res, next) =>{
         let businessContactsList = await BusinessContacts.find();
         //console.log(businessContactsList);
 
-        res.render('businesscontacts', {title: 'Business Contacts List', businessContactsList: businessContactsList})
+        res.render('businesscontacts', {title: 'Business Contacts', businessContactsList: businessContactsList})
     }
     catch (err) {
         console.log(err);
