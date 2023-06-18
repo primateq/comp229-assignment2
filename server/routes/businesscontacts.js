@@ -24,7 +24,7 @@ router.get('/update/:id', async (req, res, next) => {
     let id = req.params.id;
 
     try {
-        let contactToEdit = await Contact.findById(id);
+        let contactToEdit = await BusinessContacts.findById(id);
         res.render('businesscontacts/update', {title: 'Edit Business Contact', contact: contactToEdit});
     }
     catch (err) {
@@ -44,7 +44,7 @@ router.post('/update/:id', async (req, res, next) => {
     }
 
 try {
-    await Contact.updateOne({_id: id}, updatedContact);
+    await BusinessContacts.updateOne({_id: id}, updatedContact);
     res.redirect('/business-contacts');
 }
 catch (err) {
@@ -58,7 +58,7 @@ router.get('/delete/:id', async (req, res, next) => {
     let id=req.params.id;
 
     try {
-        await Contact.findByIdAndRemove(id);
+        await BusinessContacts.findByIdAndRemove(id);
         res.redirect('/business-contacts')
     }
     catch (err) {
