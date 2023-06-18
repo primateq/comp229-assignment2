@@ -11,7 +11,7 @@ Date: June 18, 2023-->
 
 <main class="container">
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <div class="col-md-offset-4 col-md-8">
             <h1><%= title %></h1>
             <br>
             <table class="table table-bordered table-striped table-hover">
@@ -23,11 +23,11 @@ Date: June 18, 2023-->
                     <th class="text-center">Email</th>
                 </tr>
                 <!-- Repeatable Template Row -->
-                <% for(let count = 0; count < businessContactslist.length; count++) { %>
+                <% for(let count = 0; count < businessContactsList.length; count++) { %>
                 <tr>
-                    <td class="text-center"><% businessContactslist[count].name %></td>
-                    <td class="text-center"><% businessContactslist[count].number %></td>
-                    <td class="text-center"><% businessContactslist[count].email %></td>
+                    <td class="text-center"><%= businessContactsList[count].name %></td>
+                    <td class="text-center"><%= businessContactsList[count].number %></td>
+                    <td class="text-center"><%= businessContactsList[count].email %></td>
                 </tr>
                 <% } %>
             </table>
