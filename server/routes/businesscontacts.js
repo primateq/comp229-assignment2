@@ -6,65 +6,18 @@ let mongoose = require('mongoose');
 let BusinessContacts = require('../models/businesscontacts');
 // NOT SURE WHERE THIS CAME FROM --> const businesscontacts = require('../models/businesscontacts');
 
-//Get Route for Business Contact List page - READ OPERATION
-router.get('/', async (req, res, next) =>{
-    try {
-        let businessContactsList = await BusinessContacts.find();
-        //console.log(businessContactsList);
+let businessController = require('../controllers/businesscontacts')
 
-        res.render('businesscontacts/list', {title: 'Business Contacts', businessContactsList: businessContactsList})
-    }
-    catch (err) {
-        console.log(err);
-    }
-});
+//Get Route for Business Contact List page - READ OPERATION
+router.get('/', businessController.displayBusinessList);
 
 // Get Route for displaying the Update page - UPDATE Operation
-router.get('/update/:id', async (req, res, next) => {
-    let id = req.params.id;
-
-    try {
-        let contactToEdit = await BusinessContacts.findById(id);
-        res.render('businesscontacts/update', {title: 'Edit Business Contact', contact: contactToEdit});
-    }
-    catch (err) {
-        console.log(err);
-        res.status(500).send(err);
-    }
-    });
+router.get('/update/:id', businessController.displayUpdatePage);
 
 // Post Route for processing the Update page - UPDATE Operation
-router.post('/update/:id', async (req, res, next) => {
-    let id = req.params.id;
-
-    let updatedContact = {
-        "name" : req.body.name,
-        "number" : req.body.number,
-        "email" : req.body.email
-    }
-
-try {
-    await BusinessContacts.updateOne({_id: id}, updatedContact);
-    res.redirect('/business-contacts');
-}
-catch (err) {
-    console.log(err);
-    res.status(500).send(err);
-}
-});
+router.post('/update/:id', businessController.processUpdatePage);
 
 // Get to perform Delete - DELETE Operation
-router.get('/delete/:id', async (req, res, next) => {
-    let id=req.params.id;
-
-    try {
-        await BusinessContacts.findByIdAndRemove(id);
-        res.redirect('/business-contacts')
-    }
-    catch (err) {
-        console.log(err);
-        res.status(500).send(err);
-    }
-});
+router.get('/delete/:id', businessController.performDelete);
 
 module.exports = router;
