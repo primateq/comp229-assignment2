@@ -13,23 +13,23 @@ let userModel = require('../models/user');
 let User = userModel.User; //alias
 
 module.exports.displayHomePage = (req,res,next) => {
-    res.render('index', { title: 'Home'});
+    res.render('index', { title: 'Home', userName: req.user ? req.user.userName : ''});
 }
 
 module.exports.displayAboutPage = (req,res,next) => {
-    res.render('about', { title: 'About Me'});
+    res.render('about', { title: 'About Me', userName: req.user ? req.user.userName : ''});
 }
 
 module.exports.displayProjectsPage = (req,res,next) => {
-    res.render('projects', { title: 'Projects'});
+    res.render('projects', { title: 'Projects', userName: req.user ? req.user.userName : ''});
 }
 
 module.exports.displayServicesPage = (req,res,next) => {
-    res.render('services', { title: 'Services'});
+    res.render('services', { title: 'Services', userName: req.user ? req.user.userName : ''});
 }
 
 module.exports.displayContactPage = (req,res,next) => {
-    res.render('contact', { title: 'Contact'});
+    res.render('contact', { title: 'Contact', userName: req.user ? req.user.userName : ''});
 }
 
 module.exports.displayLoginPage = (req,res,next) => {
