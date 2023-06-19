@@ -33,6 +33,6 @@ router.get('/login', indexController.displayLoginPage);
 router.post('/login', indexController.processLoginPage);
 
 /* GET to perform UserLogout. */
-router.post('/logout', indexController.performLogout);
+router.get('/logout', indexController.performLogout);
 
 module.exports = router;

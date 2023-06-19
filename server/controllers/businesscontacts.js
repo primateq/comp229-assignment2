@@ -10,7 +10,10 @@ module.exports.displayBusinessList = async (req, res, next) =>{
         let businessContactsList = await BusinessContacts.find();
         //console.log(businessContactsList);
 
-        res.render('businesscontacts/list', {title: 'Business Contacts', businessContactsList: businessContactsList})
+        res.render('businesscontacts/list', 
+        {title: 'Business Contacts', 
+        businessContactsList: businessContactsList,
+        userName: req.user ? req.user.userName : ''})
     }
     catch (err) {
         console.log(err);
@@ -22,7 +25,10 @@ module.exports.displayUpdatePage = async (req, res, next) => {
 
     try {
         let contactToEdit = await BusinessContacts.findById(id);
-        res.render('businesscontacts/update', {title: 'Edit Business Contact', contact: contactToEdit});
+        res.render('businesscontacts/update', 
+        {title: 'Edit Business Contact', 
+        contact: contactToEdit,
+        userName: req.user ? req.user.userName : ''});
     }
     catch (err) {
         console.log(err);
